@@ -15,7 +15,7 @@ export const addBlog = async (req, res) => {
     } = req.body;
     const image = req.file.path;
 
-    if(!author || !title || !content || !category){
+    if(!author || !title || !content ){
       return res.json({
         error: "Please provide all required data"
       })
